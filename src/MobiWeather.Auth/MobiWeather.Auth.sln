@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobiWeather.Auth.WebApi", "MobiWeather.Auth.WebApi.csproj", "{862FF574-A264-4E1D-9256-A5DCC728322C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobiWeather.Auth.Application", "..\MobiWeather.Auth.Application\MobiWeather.Auth.Application.csproj", "{CD755DC5-AA5B-4D33-A46C-DA2A0F401EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobiWeather.Auth.Domain", "..\MobiWeather.Auth.Domain\MobiWeather.Auth.Domain.csproj", "{F4129F9C-A810-410F-A6FA-251F5BB5B365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobiWeather.Auth.Infrastructure", "..\MobiWeather.Auth.Infrastructure\MobiWeather.Auth.Infrastructure.csproj", "{09791603-47BD-4116-B319-C49A986168DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobiWeather.Auth.DataAccess", "..\MobiWeather.Auth.DataAccess\MobiWeather.Auth.DataAccess.csproj", "{F5F62DB6-159B-424A-B85A-00D25592936E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{862FF574-A264-4E1D-9256-A5DCC728322C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862FF574-A264-4E1D-9256-A5DCC728322C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862FF574-A264-4E1D-9256-A5DCC728322C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862FF574-A264-4E1D-9256-A5DCC728322C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD755DC5-AA5B-4D33-A46C-DA2A0F401EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD755DC5-AA5B-4D33-A46C-DA2A0F401EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD755DC5-AA5B-4D33-A46C-DA2A0F401EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD755DC5-AA5B-4D33-A46C-DA2A0F401EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4129F9C-A810-410F-A6FA-251F5BB5B365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4129F9C-A810-410F-A6FA-251F5BB5B365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4129F9C-A810-410F-A6FA-251F5BB5B365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4129F9C-A810-410F-A6FA-251F5BB5B365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09791603-47BD-4116-B319-C49A986168DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09791603-47BD-4116-B319-C49A986168DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09791603-47BD-4116-B319-C49A986168DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09791603-47BD-4116-B319-C49A986168DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F62DB6-159B-424A-B85A-00D25592936E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F62DB6-159B-424A-B85A-00D25592936E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F62DB6-159B-424A-B85A-00D25592936E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F62DB6-159B-424A-B85A-00D25592936E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FB4A0F4-8C2D-4BB5-9D88-DC2FF5C08903}
+	EndGlobalSection
+EndGlobal
