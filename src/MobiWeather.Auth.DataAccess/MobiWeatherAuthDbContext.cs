@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MobiWeather.Auth.Domain.Entities;
 
 namespace MobiWeather.Auth.DataAccess
 {
-    public class MobiWeatherAuthDbContext : DbContext
+    public class MobiWeatherAuthDbContext : IdentityDbContext
     {
         public MobiWeatherAuthDbContext(DbContextOptions<MobiWeatherAuthDbContext> options)
             : base(options)
