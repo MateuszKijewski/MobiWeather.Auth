@@ -1,11 +1,20 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using MobiWeather.Auth.Application.Common.Interfaces.Providers;
+using MobiWeather.Auth.Application.Common.Interfaces.Services;
+using MobiWeather.Auth.Application.Providers;
+using MobiWeather.Auth.Application.Services;
 using MobiWeather.Auth.DataAccess;
+using MobiWeather.Auth.Domain.Entities;
+using MobiWeather.Auth.Infrastructure.Common.Interfaces;
+using MobiWeather.Auth.Infrastructure.Common.Providers;
+using MobiWeather.Auth.Infrastructure.Common.Repositories;
 
 namespace MobiWeather.Auth
 {
@@ -24,6 +33,14 @@ namespace MobiWeather.Auth
             services.AddDbContext<MobiWeatherAuthDbContext>(options =>
                 options.UseSqlServer(
                         Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<MobiWeatherAuthDbContext>();
+
+            services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddTransient<IBaseRepositoryProvider, BaseRepositoryProvider>();
+            services.AddTransient<ITokenProvider, TokenProvider>();
+            services.AddTransient<IUserService, UserService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -51,6 +68,7 @@ namespace MobiWeather.Auth
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
