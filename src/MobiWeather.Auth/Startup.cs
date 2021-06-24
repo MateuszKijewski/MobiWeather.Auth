@@ -6,6 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using MobiWeather.Auth.Application.Common.Interfaces.Providers;
+using MobiWeather.Auth.Application.Common.Interfaces.Services;
+using MobiWeather.Auth.Application.Providers;
+using MobiWeather.Auth.Application.Services;
 using MobiWeather.Auth.DataAccess;
 using MobiWeather.Auth.Domain.Entities;
 using MobiWeather.Auth.Infrastructure.Common.Interfaces;
@@ -35,6 +39,8 @@ namespace MobiWeather.Auth
 
             services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IBaseRepositoryProvider, BaseRepositoryProvider>();
+            services.AddTransient<ITokenProvider, TokenProvider>();
+            services.AddTransient<IUserService, UserService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

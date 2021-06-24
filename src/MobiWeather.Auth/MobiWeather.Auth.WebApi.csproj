@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MobiWeather.Auth.Application\MobiWeather.Auth.Application.csproj" />
     <ProjectReference Include="..\MobiWeather.Auth.DataAccess\MobiWeather.Auth.DataAccess.csproj" />
     <ProjectReference Include="..\MobiWeather.Auth.Infrastructure\MobiWeather.Auth.Infrastructure.csproj" />
   </ItemGroup>
