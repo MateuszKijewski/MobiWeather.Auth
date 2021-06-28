@@ -23,7 +23,6 @@ jobs:
         include-prerelease: true
 
     - name: Build with dotnet
-      working-directory: '../src'
       run: dotnet build --configuration Debug
 
     - name: dotnet publish
